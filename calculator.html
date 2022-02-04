@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Calculator</h1>
+        <input type="text" id="firstNum"> </input> <br>
+        <input type="text" id="secondNum"> </input> <br>
+        <button id="button1" onclick="Add()">Addition (+)</button> 
+        <button id="button2" onclick="Sub()">Subtraction (-)</button> <br>
+        <button id="button3" onclick="Mul()">Multiply (x)</button> 
+        <button id="button4" onclick="Div()">Divide (/)</button>
+    </form>
+    <p id="result"> Result is: </p>
+</body>
+<script>
+    function Add(){
+        let firstNum= parseFloat(document.getElementById("firstNum").value)
+        let secondNum= parseFloat(document.getElementById("secondNum").value)
+        let result=firstNum+secondNum
+        document.getElementById("result").innerText = "Result is: " + result
+    }
+    function Sub(){
+        let firstNum= parseFloat(document.getElementById("firstNum").value)
+        let secondNum= parseFloat(document.getElementById("secondNum").value)
+        let result=firstNum-secondNum
+        document.getElementById("result").innerText = "Result is: " + result
+    }
+    function Mul(){
+        let firstNum= parseFloat(document.getElementById("firstNum").value)
+        let secondNum= parseFloat(document.getElementById("secondNum").value)
+        let result=firstNum*secondNum
+        document.getElementById("result").innerText = "Result is: " + result
+    }
+    function Div(){
+        let firstNum= parseFloat(document.getElementById("firstNum").value)
+        let secondNum= parseFloat(document.getElementById("secondNum").value)
+        let result=firstNum/secondNum
+        document.getElementById("result").innerText = "Result is: " + result
+    }
+</script>
+</html>
